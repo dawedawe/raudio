@@ -37,7 +37,9 @@ fn wpctl_set_default(id: &str) {
 fn main() {
     let sink = if let Some(arg1) = std::env::args().nth(1) {
         match arg1.as_str() {
-            "hdmi" => "DisplayPort 1",
+            "hdmi1" => "DisplayPort 1",
+            "hdmi2" => "DisplayPort 2",
+            "hdmi3" => "DisplayPort 3",
             "headset" => "Jabra Link",
             "nb" => "HD Audio Controller",
             "flip" => "jblflip3",
@@ -47,7 +49,7 @@ fn main() {
             }
         }
     } else {
-        "DisplayPort 1"
+        "DisplayPort 2"
     };
 
     let status = wpctl_status();
