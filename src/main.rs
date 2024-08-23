@@ -46,7 +46,7 @@ fn main() {
             }
         }
     } else {
-        "DisplayPort 2"
+        "DisplayPort 3"
     };
 
     let status = wpctl_status();
