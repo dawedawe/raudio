@@ -2,10 +2,7 @@ use std::process::Command;
 
 fn wpctl_status() -> String {
     match Command::new("wpctl").arg("status").output() {
-        Ok(output) => {
-            let out = String::from_utf8(output.stdout).unwrap();
-            out
-        }
+        Ok(output) => String::from_utf8(output.stdout).unwrap(),
         Err(e) => {
             eprintln!("Error: {}", e);
             std::process::exit(1);
