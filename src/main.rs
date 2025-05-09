@@ -40,6 +40,7 @@ fn main() {
             "headset" => "Jabra Link",
             "nb" => "HD Audio Controller",
             "flip" => "jblflip3",
+            "dock" => "Dock Audio",
             _ => {
                 eprintln!("unknown arg");
                 std::process::exit(1);
